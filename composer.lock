@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "942239311114914f0acc2a10ab98b38f",
+    "content-hash": "8246ae8ae3efe262f1a801b0077a63f4",
     "packages": [
         {
             "name": "colbycommunications/colby-groups",
@@ -442,24 +442,6 @@
             "homepage": "https://wordpress.org/plugins/header-footer/"
         },
         {
-            "name": "wpackagist-plugin/jetwidgets-for-elementor",
-            "version": "1.0.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/jetwidgets-for-elementor/",
-                "reference": "tags/1.0.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetwidgets-for-elementor.1.0.7.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/jetwidgets-for-elementor/"
-        },
-        {
             "name": "wpackagist-plugin/tablepress",
             "version": "1.11",
             "source": {
@@ -515,15 +497,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "13.5",
+            "version": "14.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/13.5"
+                "reference": "tags/14.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
