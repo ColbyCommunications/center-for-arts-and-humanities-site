@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "580ad7cd8ac35a3e4c5cc9c5cd7d3563",
+    "content-hash": "564b7d0da7ef336c6f37feed1f81ed28",
     "packages": [
         {
             "name": "colbycommunications/colby-groups",
@@ -411,15 +411,15 @@
         },
         {
             "name": "wpackagist-plugin/cloudflare",
-            "version": "3.8.9",
+            "version": "4.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cloudflare/",
-                "reference": "tags/3.8.9"
+                "reference": "tags/4.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cloudflare.3.8.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/cloudflare.4.5.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

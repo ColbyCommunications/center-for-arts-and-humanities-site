@@ -15,7 +15,7 @@
         "wpackagist-plugin/header-footer": "^3.1.3",
         "wpackagist-plugin/duplicate-post": "^3.2.4",
         "wpackagist-plugin/wordpress-seo": "^14.0",
-        "wpackagist-plugin/cloudflare": "^3.4.1",
+        "wpackagist-plugin/cloudflare": "^4.5.1",
         "devgeniem/wp-redis-object-cache-dropin": "^1.6",
         "wpackagist-plugin/cache-control": "^2.2.3",
         "wpackagist-plugin/user-switching": "^1.5.4",
@@ -42,8 +42,7 @@
         "wordpress-install-dir": "web/wp",
         "installer-paths": {
             "web/wp-content/mu-plugins/{$name}": [
-                "type:wordpress-muplugin",
-                "wpackagist-plugin/cache-control"
+                "type:wordpress-muplugin"
             ],
             "web/wp-content/plugins/{$name}": [
                 "type:wordpress-plugin"
