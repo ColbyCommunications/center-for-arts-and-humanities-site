@@ -13,17 +13,19 @@ npm install
 gulp
 cd -
 
-NPM_DIRS=`ls web/wp-content/@(plugins|themes)/colby-*/src/@(index.js)` # Saves it to a variable
-for NPMDIR in $NPM_DIRS; do
-  NPMDIR=`dirname $NPMDIR`
-  NPMDIR_PRUNED=${NPMDIR:0:$((${#NPMDIR}-3))}
-  cd $NPMDIR_PRUNED
-  printf "Installing NPM dependencies for ${NPMDIR_PRUNED}... \n"
-  npm install
-  printf "Running build for ${NPMDIR_PRUNED}... \n"
-  npm run build
-  cd -
-done
+cd web/wp-content/themes/colby-base-theme
+composer install
+composer dump-autoload
+npm install
+npm run build:production
+cd -
+
+cd web/wp-content/themes/colby-cah-theme
+composer install
+composer dump-autoload
+npm install
+npm run build:production
+cd -
 
 # npm install
 shopt -u extglob

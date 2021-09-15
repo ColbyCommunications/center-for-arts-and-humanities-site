@@ -20,7 +20,8 @@
         "wpackagist-plugin/cache-control": "^2.2.3",
         "wpackagist-plugin/user-switching": "^1.5.4",
         "wpackagist-plugin/wp-saml-auth": "^1.1.0",
-        "wpackagist-plugin/siteimprove": "1.2.0"
+        "wpackagist-plugin/siteimprove": "1.2.0",
+        "colbycommunications/colby-cah-theme": "dev-master"
     },
     "authors": [
         {
@@ -32,6 +33,10 @@
         {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/colby-groups"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-cah-theme"
         },
         {
             "type": "composer",
