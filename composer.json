@@ -17,8 +17,8 @@
         "wpackagist-plugin/wordpress-seo": "^13.3",
         "wpackagist-plugin/cloudflare": "^4.5.1",
         "devgeniem/wp-redis-object-cache-dropin": "^1.6",
-        "wpackagist-plugin/cache-control": "^2.2.3",
         "colbycommunications/colby-base-theme": "dev-master",
+        "colbycommunications/colby-cah-theme": "dev-master",
         "wpackagist-plugin/public-post-preview": "^2.9.1",
         "wp-graphql/wp-graphql": "^0.12.1",
         "wp-graphql/wp-graphiql": "^1.0",
@@ -33,6 +33,10 @@
         }
     ],
     "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-cah-theme"
+        },
         {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/colby-base-theme"

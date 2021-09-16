@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7a8e3da4a242378566494e8df52aca5",
+    "content-hash": "a85d52e3b8012f36ed2f185ec6c8fe33",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -112,6 +112,55 @@
                 "wordpress"
             ],
             "time": "2021-04-15T19:24:09+00:00"
+        },
+        {
+            "name": "colbycommunications/colby-cah-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColbyCommunications/colby-cah-theme",
+                "reference": "d4311c448300d65868dd9f3ee1551462df2b27f2"
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "illuminate/support": "5.6.*",
+                "php": ">=7.1",
+                "roots/sage-lib": "~9.0.9",
+                "soberwp/controller": "~2.1.0"
+            },
+            "require-dev": {
+                "roots/sage-installer": "~1.6",
+                "squizlabs/php_codesniffer": "^2.8.0"
+            },
+            "default-branch": true,
+            "type": "wordpress-theme",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpcs"
+                ],
+                "post-create-project-cmd": [
+                    "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Waltz",
+                    "email": "brandon.waltz@colby.edu"
+                }
+            ],
+            "description": "Colby WordPress starter theme with a modern development workflow",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2021-09-16T15:52:31+00:00"
         },
         {
             "name": "colbycommunications/colby-groups",
@@ -2250,24 +2299,6 @@
             "time": "2020-09-08T18:17:17+00:00"
         },
         {
-            "name": "wpackagist-plugin/cache-control",
-            "version": "2.2.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/cache-control/",
-                "reference": "tags/2.2.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cache-control.2.2.5.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0 || ~2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/cache-control/"
-        },
-        {
             "name": "wpackagist-plugin/capability-manager-enhanced",
             "version": "1.9",
             "source": {
@@ -2507,7 +2538,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "colbycommunications/colby-groups": 20,
-        "colbycommunications/colby-base-theme": 20
+        "colbycommunications/colby-base-theme": 20,
+        "colbycommunications/colby-cah-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
