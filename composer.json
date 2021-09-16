@@ -26,7 +26,6 @@
         "wpackagist-plugin/wp-saml-auth": "^1.1.0",
         "wpackagist-plugin/siteimprove": "^1",
         "wpackagist-plugin/publishpress": "*",
-        "wpackagist-plugin/jet-style-manager":"^1"
     },
     "authors": [
         {
