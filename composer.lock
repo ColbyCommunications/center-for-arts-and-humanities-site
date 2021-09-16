@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f49df4a23a22bc498c87d6de83917df",
+    "content-hash": "2bac1a0e8b6a25c72b1927a459e95295",
     "packages": [
         {
             "name": "colbycommunications/colby-groups",
@@ -958,26 +958,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/header-footer/"
-        },
-        {
-            "name": "wpackagist-plugin/jet-style-manager",
-            "version": "1.3.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/jet-style-manager/",
-                "reference": "tags/1.3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jet-style-manager.1.3.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0 || ~2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/jet-style-manager/"
         },
         {
             "name": "wpackagist-plugin/public-post-preview",
