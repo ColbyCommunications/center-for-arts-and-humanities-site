@@ -114,7 +114,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-cah-theme",
-                "reference": "c42ecf211403e93eb8919fd82019a6d0bd169b72"
+                "reference": "ac3bd46ef76d7e0dcf5a12984706ce273a6ed6ce"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -154,7 +154,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2021-09-20 19:10:22"
+            "time": "2021-09-21 15:39:52"
         },
         {
             "name": "colbycommunications/colby-groups",
