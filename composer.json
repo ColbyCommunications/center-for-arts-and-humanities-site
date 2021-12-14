@@ -24,7 +24,8 @@
         "wp-graphql/wp-graphiql": "^1",
         "wpackagist-plugin/wp-saml-auth": "^1.1.0",
         "wpackagist-plugin/siteimprove": "^1",
-        "wpackagist-plugin/publishpress": "*"
+        "wpackagist-plugin/publishpress": "*",
+        "wpackagist-plugin/query-monitor": "^3.7.1"
     },
     "authors": [
         {
