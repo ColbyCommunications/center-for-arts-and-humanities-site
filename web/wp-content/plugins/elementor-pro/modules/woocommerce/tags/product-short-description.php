@@ -13,7 +13,11 @@ class Product_Short_Description extends Base_Tag {
 	}
 
 	public function get_title() {
-		return __( 'Product Short Description', 'elementor-pro' );
+		return esc_html__( 'Product Short Description', 'elementor-pro' );
+	}
+
+	protected function register_controls() {
+		$this->add_product_id_control();
 	}
 
 	protected function register_controls() {
@@ -26,6 +30,6 @@ class Product_Short_Description extends Base_Tag {
 			return;
 		}
 
-		echo $product->get_short_description();
+		echo wp_kses_post( $product->get_short_description() );
 	}
 }
