@@ -28,7 +28,7 @@ done
 
 
 printf "Sage Themes... \n"
-NPM_THEME_DIRS=`ls web/wp-content/themes/colby-*/resources/assets/scripts/@(main.js)` # Saves it to a variable
+NPM_THEME_DIRS=`ls web/wp-content/themes/colby-*/resources/scripts/@(app.js)` # Saves it to a variable
 
 
 for NPMTHEMEDIR in $NPM_THEME_DIRS; do
