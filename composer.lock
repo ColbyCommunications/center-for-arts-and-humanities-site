@@ -191,7 +191,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-cah-theme",
-                "reference": "c42ffa4ffc5a3951315f0bc72ce3ef5057cd895c"
+                "reference": "254fc89f7968456963cb29ca320b9d9f75d0323a"
             },
             "require": {
                 "php": "^7.4|^8.0",
@@ -256,7 +256,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2022-05-11T17:18:06+00:00"
+            "time": "2022-05-11T19:25:57+00:00"
         },
         {
             "name": "colbycommunications/colby-groups",
