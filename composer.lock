@@ -118,7 +118,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-base-theme",
-                "reference": "493ee8e07cd18827c6371750f6723a8e0870adea"
+                "reference": "3b2975034f1e8bf90e10c951903d973e510e12f2"
             },
             "require": {
                 "php": "^7.4|^8.0",
@@ -183,7 +183,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2022-05-11T16:46:59+00:00"
+            "time": "2022-05-11T17:12:07+00:00"
         },
         {
             "name": "colbycommunications/colby-cah-theme",
@@ -191,7 +191,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-cah-theme",
-                "reference": "7ad23f6e855dca50abe6b146ec80d5fe03ca28ef"
+                "reference": "c42ffa4ffc5a3951315f0bc72ce3ef5057cd895c"
             },
             "require": {
                 "php": "^7.4|^8.0",
@@ -256,7 +256,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2022-05-09T20:40:59+00:00"
+            "time": "2022-05-11T17:18:06+00:00"
         },
         {
             "name": "colbycommunications/colby-groups",
