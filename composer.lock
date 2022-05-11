@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73ee4cf03c5b341040e9f7e60fe48a2d",
+    "content-hash": "f4c59659c9c109ad60a27ea3ac663b63",
     "packages": [
         {
             "name": "appsero/client",
@@ -111,6 +111,79 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "colbycommunications/colby-base-theme",
+            "version": "dev-sage-10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColbyCommunications/colby-base-theme",
+                "reference": "493ee8e07cd18827c6371750f6723a8e0870adea"
+            },
+            "require": {
+                "php": "^7.4|^8.0",
+                "roots/acorn": "^2.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.6"
+            },
+            "suggest": {
+                "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
+                "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
+            },
+            "type": "wordpress-theme",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "App\\Providers\\ThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/"
+                }
+            },
+            "scripts": {
+                "lint": [
+                    "phpcs --extensions=php --standard=PSR12 app"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                },
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "QWp6t",
+                    "email": "hi@qwp6t.me",
+                    "homepage": "https://github.com/qwp6t"
+                },
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me",
+                    "homepage": "https://github.com/log1x"
+                }
+            ],
+            "description": "WordPress starter theme with a modern development workflow",
+            "homepage": "https://roots.io/sage/",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/roots/sage/issues",
+                "forum": "https://discourse.roots.io/"
+            },
+            "time": "2022-05-11T16:46:59+00:00"
         },
         {
             "name": "colbycommunications/colby-cah-theme",
@@ -5373,6 +5446,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "colbycommunications/colby-groups": 20,
+        "colbycommunications/colby-base-theme": 20,
         "colbycommunications/colby-cah-theme": 20
     },
     "prefer-stable": false,
