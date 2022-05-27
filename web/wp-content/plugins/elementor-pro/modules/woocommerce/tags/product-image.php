@@ -23,10 +23,6 @@ class Product_Image extends Base_Data_Tag {
 		$this->add_product_id_control();
 	}
 
-	protected function register_controls() {
-		$this->add_product_id_control();
-	}
-
 	public function get_group() {
 		return Module::WOOCOMMERCE_GROUP;
 	}
