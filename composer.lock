@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5708123bc8f91aaa6b684d45353e681b",
+    "content-hash": "d8271f928da62bd2c729e7e003d0fda7",
     "packages": [
         {
             "name": "appsero/client",
@@ -142,11 +142,11 @@
         },
         {
             "name": "colbycommunications/colby-cah-theme",
-            "version": "dev-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-cah-theme",
-                "reference": "254fc89f7968456963cb29ca320b9d9f75d0323a"
+                "reference": "5a0760de27e363046f08feefd4165e1e6c2328c8"
             },
             "require": {
                 "php": "^7.4|^8.0",
@@ -159,6 +159,7 @@
                 "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
                 "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
             },
+            "default-branch": true,
             "type": "wordpress-theme",
             "extra": {
                 "acorn": {
@@ -211,7 +212,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2022-05-11T19:25:57+00:00"
+            "time": "2022-06-10T11:45:43+00:00"
         },
         {
             "name": "colbycommunications/colby-ticket",
@@ -9242,5 +9243,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
