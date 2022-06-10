@@ -20,10 +20,6 @@ class Product_Short_Description extends Base_Tag {
 		$this->add_product_id_control();
 	}
 
-	protected function register_controls() {
-		$this->add_product_id_control();
-	}
-
 	public function render() {
 		$product = wc_get_product( $this->get_settings( 'product_id' ) );
 		if ( ! $product ) {
