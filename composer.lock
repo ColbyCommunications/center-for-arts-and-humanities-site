@@ -219,7 +219,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-cah-theme",
-                "reference": "5a0760de27e363046f08feefd4165e1e6c2328c8"
+                "reference": "ee2296f8e12bb17a92546b281cc1b9157bb04036"
             },
             "require": {
                 "php": "^7.4|^8.0",
@@ -285,7 +285,7 @@
                 "issues": "https://github.com/roots/sage/issues",
                 "forum": "https://discourse.roots.io/"
             },
-            "time": "2022-06-10T11:45:43+00:00"
+            "time": "2022-07-11T16:38:19+00:00"
         },
         {
             "name": "colbycommunications/colby-groups",
@@ -9300,15 +9300,15 @@
         },
         {
             "name": "wpackagist-theme/hello-elementor",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/hello-elementor/",
-                "reference": "2.6.0"
+                "reference": "2.6.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/hello-elementor.2.6.0.zip"
+                "url": "https://downloads.wordpress.org/theme/hello-elementor.2.6.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
