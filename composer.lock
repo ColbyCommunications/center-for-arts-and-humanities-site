@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66d95a65c4f734e61c274818094759ed",
+    "content-hash": "cb756b33b8de2a76fa913ee3eb5ffbc5",
     "packages": [
         {
             "name": "brick/math",
@@ -8105,6 +8105,24 @@
                 "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.3.3"
             },
             "time": "2023-04-26T19:51:31+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/cache-control",
+            "version": "2.2.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/cache-control/",
+                "reference": "tags/2.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/cache-control.2.2.5.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cache-control/"
         },
         {
             "name": "wpackagist-plugin/classic-editor",
