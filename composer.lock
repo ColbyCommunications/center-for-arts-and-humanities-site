@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50bad5851dd5a2e2c82a82d6e2dca07a",
+    "content-hash": "2a4686ca080ba1572fde3ba1398a3773",
     "packages": [
         {
             "name": "colbycommunications/advanced-custom-fields-pro",
@@ -5200,15 +5200,15 @@
         },
         {
             "name": "wpackagist-plugin/cloudflare",
-            "version": "4.12.2",
+            "version": "4.12.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cloudflare/",
-                "reference": "tags/4.12.2"
+                "reference": "tags/4.12.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cloudflare.4.12.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/cloudflare.4.12.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
