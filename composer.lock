@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81248e59e0a68201336be540dd88e73d",
+    "content-hash": "c6ad02163656d3d32dacf2ed5176ddc7",
     "packages": [
         {
             "name": "colbycommunications/advanced-custom-fields-pro",
@@ -5630,15 +5630,15 @@
         },
         {
             "name": "wpackagist-theme/hello-elementor",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/hello-elementor/",
-                "reference": "3.0.0"
+                "reference": "3.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/hello-elementor.3.0.0.zip"
+                "url": "https://downloads.wordpress.org/theme/hello-elementor.3.1.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
