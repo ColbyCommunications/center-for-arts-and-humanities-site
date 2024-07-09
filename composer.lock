@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c6f05dd0795437e795d05fda2744748",
+    "content-hash": "81248e59e0a68201336be540dd88e73d",
     "packages": [
         {
             "name": "colbycommunications/advanced-custom-fields-pro",
@@ -5576,15 +5576,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-nested-pages",
-            "version": "3.2.7",
+            "version": "3.2.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-nested-pages/",
-                "reference": "tags/3.2.7"
+                "reference": "tags/3.2.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.8.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
