@@ -6,6 +6,6 @@
     "license": "None",
     "dependencies": {
         "superagent": "7.0.2",
-        "@colbycommunications/colby-lighthouse-batch": "1.0.0"
+        "@colbycommunications/colby-lighthouse-batch": "1.0.1"
     }
 }
