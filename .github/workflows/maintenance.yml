@@ -1,0 +1,11 @@
+name: Run Maintenance
+on:
+  push:
+    branches:
+      - 'maintenance-*'
+jobs:
+  percy:
+    uses: ./.github/workflows/percy.yml
+    secrets: inherit
+  cypress:
+    run: npm run tests
