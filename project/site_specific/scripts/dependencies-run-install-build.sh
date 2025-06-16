@@ -1,5 +1,5 @@
 
-#!/usr/bin/env bash
+#!/usr/bin/env bash1
 
 printf "Installing NPM dependencies for Colby dependencies"
 
