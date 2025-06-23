@@ -93,7 +93,7 @@ jobs:
 
   maintenance:
     needs: test_prep
-    if: startsWith(github.head_ref, 'maintenance-')
+    if: startsWith(GITHUB_REF#refs/heads/, 'maintenance-')
     uses: ./.github/workflows/maintenance.yml
     secrets: inherit
 
