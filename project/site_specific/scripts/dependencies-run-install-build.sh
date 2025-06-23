@@ -14,5 +14,3 @@ yarn
 yarn scripts:build
 cd -
 
-# npm install
-shopt -u extglob
