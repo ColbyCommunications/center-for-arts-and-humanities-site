@@ -92,6 +92,7 @@ jobs:
           retention-days: 1
 
   maintenance:
+    needs: test_prep
     if: startsWith(github.head_ref, 'maintenance-')
     uses: ./.github/workflows/maintenance.yml
     secrets: inherit
