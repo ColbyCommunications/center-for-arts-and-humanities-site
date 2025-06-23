@@ -20,7 +20,18 @@ const platformPath = path.join(siteSpecificPath, 'platform');
 fs.mkdirSync(platformPath, { recursive: true });
 fs.writeFileSync(path.join(platformPath, 'app.disk.yaml'), '2048');
 fs.writeFileSync(path.join(platformPath, 'mysql.disk.yaml'), '');
-fs.writeFileSync(path.join(platformPath, 'routes.yaml'), '');
+fs.writeFileSync(path.join(platformPath, 'app.php.yaml'), '');
+
+const routesContent = `
+'^/wp-admin$':
+  to: "/wp/wp-admin/"
+  regexp: true
+'^/wp-admin/(.*)':
+  to: "/wp/wp-admin/$1"
+  regexp: true
+`;
+
+fs.writeFileSync(path.join(platformPath, 'routes.yaml'), routesContent);
 
 // Create composer_requirements.php
 const composerContent = `{
@@ -28,7 +39,7 @@ const composerContent = `{
 }
 `;
 
-fs.writeFileSync(path.join(siteSpecificPath, 'composer_requirements.php'), composerContent);
+fs.writeFileSync(path.join(siteSpecificPath, 'composer_requirements.json'), composerContent);
 
 // Create package.json
 const packageJsonContent = `{
@@ -86,6 +97,18 @@ fs.writeFileSync(
     wpConfig
 );
 
+const cypressConfigContent = `
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+    defaultCommandTimeout: 10000,
+});
+`;
+fs.writeFileSync(
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress.config.js'),
+    cypressConfigContent
+);
+
 // Create scripts folder
 fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), { recursive: true });
 
@@ -93,14 +116,14 @@ fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), { re
 const depScriptContent = `
 #!/usr/bin/env bash
 
-printf "Installing NPM dependencies for Colby dependencies \n"
+printf "Installing NPM dependencies for Colby dependencies"
 
 shopt -s extglob # Turns on extended globbing
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-printf "Build Colby Theme... \n"
+printf "Build Colby Theme..."
 cd web/wp-content/themes/colby-college-theme
 composer install
 composer dump-autoload
@@ -118,7 +141,7 @@ fs.writeFileSync(
         'project',
         'site_specific',
         'scripts',
-        ' dependencies-run-install-build.sh'
+        'dependencies-run-install-build.sh'
     ),
     depScriptContent
 );

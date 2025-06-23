@@ -1,11 +1,23 @@
 name: Run Maintenance
 on:
-  push:
-    branches:
-      - 'maintenance-*'
+  workflow_call:
+env:
+  CYPRESS_ENV_JSON: ${{ secrets.CYPRESS_ENV_JSON }}
 jobs:
   percy:
     uses: ./.github/workflows/percy.yml
     secrets: inherit
   cypress:
-    run: npm run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate cypress.env.json from secret
+        run: echo '${{ secrets.CYPRESS_ENV_JSON }}' > cypress.env.json
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm install
+      - name: Run Cypress Tests
+        run: npm run tests
