@@ -3,6 +3,7 @@ on:
   workflow_call:
 env:
   CYPRESS_ENV_JSON: ${{ secrets.CYPRESS_ENV_JSON }}
+  WEBMASTER_GITHUB_ACTIONS_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
 jobs:
   percy:
     uses: ./.github/workflows/percy.yml
