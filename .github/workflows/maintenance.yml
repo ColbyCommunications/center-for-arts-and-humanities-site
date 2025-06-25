@@ -4,6 +4,7 @@ on:
 env:
   CYPRESS_ENV_JSON: ${{ secrets.CYPRESS_ENV_JSON }}
   WEBMASTER_GITHUB_ACTIONS_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
+    PLATFORM_PROJECT_ID: ${{ secrets.PLATFORM_PROJECT_ID }}
 jobs:
   percy:
     uses: ./.github/workflows/percy.yml
@@ -15,6 +16,8 @@ jobs:
       - name: Install Psh CLI
         run: |
           curl -sS https://platform.sh/cli/installer | php
+          ~/.platformsh/bin/platform project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
+
       - name: Generate cypress.env.json from secret
         run: echo '${{ secrets.CYPRESS_ENV_JSON }}' > cypress.env.json
       - name: Setup node
