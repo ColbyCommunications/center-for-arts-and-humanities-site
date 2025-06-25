@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-       - name: Install Psh CLI
-        run: |
-          curl -sS https://platform.sh/cli/installer | php
+      - name: Install Psh CLI
+      run: |
+        curl -sS https://platform.sh/cli/installer | php
       - name: Generate cypress.env.json from secret
         run: echo '${{ secrets.CYPRESS_ENV_JSON }}' > cypress.env.json
       - name: Setup node
