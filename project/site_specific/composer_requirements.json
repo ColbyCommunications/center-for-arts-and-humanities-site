@@ -1,5 +1,10 @@
 {
-    "require": { "wpackagist-theme/hello-elementor": "3.2.1" },
+    "require": {
+        "wpackagist-theme/hello-elementor": "3.4.4",
+        "colbycommunications/elementor-pro": "3.26.2",
+        "wpackagist-plugin/classic-editor": "1.6.7",
+        "wpackagist-plugin/elementor": "3.26.3"
+    },
     "repositories": [],
     "extra": {
         "installer-paths": {
