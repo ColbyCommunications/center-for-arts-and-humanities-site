@@ -29,7 +29,7 @@ if (branch === 'dev') {
 /**
  * Sync starter
  */
-execSync('git pull upstream dev --allow-unrelated-histories', (err, stdout, stderr) => {
+execSync('git pull upstream master --allow-unrelated-histories', (err, stdout, stderr) => {
     if (err) {
         console.error('Error running git command:', err);
         return;
@@ -40,6 +40,16 @@ execSync('git pull upstream dev --allow-unrelated-histories', (err, stdout, stde
  * Run composer update script
  */
 execSync('node ./scripts/composer_update.js', (err, stdout, stderr) => {
+    if (err) {
+        console.error('Error running git command:', err);
+        return;
+    }
+});
+
+/**
+ * Run npm script
+ */
+execSync('node ./scripts/npm_install.js', (err, stdout, stderr) => {
     if (err) {
         console.error('Error running git command:', err);
         return;

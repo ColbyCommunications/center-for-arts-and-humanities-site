@@ -10,11 +10,6 @@ const projectRoot = process.cwd();
 const siteSpecificPath = path.join(projectRoot, 'project', 'site_specific');
 fs.mkdirSync(siteSpecificPath, { recursive: true });
 
-// Create "lando" folder and "name.yaml" file
-const landoPath = path.join(siteSpecificPath, 'lando');
-fs.mkdirSync(landoPath, { recursive: true });
-fs.writeFileSync(path.join(landoPath, 'name.yaml'), '');
-
 // Create "platform" folder and 3 files
 const platformPath = path.join(siteSpecificPath, 'platform');
 fs.mkdirSync(platformPath, { recursive: true });
@@ -97,16 +92,58 @@ fs.writeFileSync(
     wpConfig
 );
 
+// Create config/cypress folder
+fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress'), {
+    recursive: true,
+});
+fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support'), {
+    recursive: true,
+});
+
 const cypressConfigContent = `
 const { defineConfig } = require('cypress');
 
+const { execSync } = require('child_process');
+let site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
+let siteFull = \`https://\${site\}\`;
+
 module.exports = defineConfig({
     defaultCommandTimeout: 10000,
+    e2e: {
+        baseUrl: siteFull,
+        supportFile: 'project/site_specific/config/cypress/support/e2e.js',
+        specPattern: ['project/site_specific/tests/cypress/*', 'project/global/tests/cypress/*'],
+    },
 });
+
 `;
 fs.writeFileSync(
-    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress.config.js'),
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'cypress.config.js'),
     cypressConfigContent
+);
+
+fs.writeFileSync(
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support', 'e2e.js'),
+    `
+import './commands'
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false;
+});
+`
+);
+fs.writeFileSync(
+    path.join(
+        projectRoot,
+        'project',
+        'site_specific',
+        'config',
+        'cypress',
+        'support',
+        'commands.js'
+    ),
+    ''
 );
 
 // Create scripts folder
@@ -117,8 +154,6 @@ const depScriptContent = `
 #!/usr/bin/env bash
 
 printf "Installing NPM dependencies for Colby dependencies"
-
-shopt -s extglob # Turns on extended globbing
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -131,8 +166,6 @@ yarn
 yarn scripts:build
 cd -
 
-# npm install
-shopt -u extglob
 `;
 
 fs.writeFileSync(
@@ -146,7 +179,7 @@ fs.writeFileSync(
     depScriptContent
 );
 
-fs.existsSync('chmod +x project/site_specific/scripts');
+fs.existsSync('chmod +x project/site_specific/scripts/*');
 
 console.log('All files and folders created successfully!');
 
