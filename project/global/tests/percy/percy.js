@@ -3,7 +3,14 @@ const percySnapshot = require('@percy/puppeteer');
 const scrollToBottom = require('scroll-to-bottomjs');
 const { execSync } = require('child_process');
 
-let site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
+const branch = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
+
+let site;
+if (branch === 'master') {
+    site = execSync('~/.platformsh/bin/platform environment:info default_domain');
+} else {
+    site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
+}
 let siteFull = `https://${site}`;
 
 (async () => {
