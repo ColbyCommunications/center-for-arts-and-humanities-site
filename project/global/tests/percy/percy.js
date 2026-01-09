@@ -9,7 +9,7 @@ async function loginToWordPress(page, siteUrl) {
     if (!process.env.WP_USERNAME || !process.env.WP_PASSWORD) {
         throw new Error('WP_USERNAME and WP_PASSWORD environment variables are missing!');
     }
-
+    console.log(`${siteUrl}/wp/wp-admin/`);
     // cy.visit('/wp/wp-admin/')
     await page.goto(`${siteUrl}/wp/wp-admin/`, { waitUntil: 'networkidle2' });
 
