@@ -26,7 +26,6 @@ let siteFull = `https://${site}`;
 
     // Test Page
     const testPage = await browser.newPage();
-    await testPage.setUserAgent('colby-github');
     await testPage.goto(`${siteFull}/test-page`);
     await new Promise(function (resolve) {
         setTimeout(async function () {

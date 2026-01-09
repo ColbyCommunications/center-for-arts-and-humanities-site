@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       PERCY_PARALLEL_TOTAL: 2
-      PERCY_DISCOVERY_USER_AGENT: 'colby-github'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
