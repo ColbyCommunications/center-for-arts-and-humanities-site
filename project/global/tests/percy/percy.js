@@ -48,12 +48,13 @@ let siteFull = `https://${site}`;
     const scrollOptions = { frequency: 100, timing: 200 };
     const testPage = await browser.newPage();
 
+    // 2. Navigate to the test page (now logged in)
+    await testPage.setUserAgent('colby-github');
+
     // 1. Run the Login Routine
     // This sets the cookies in the local Puppeteer browser
     await loginToWordPress(testPage, siteFull);
 
-    // 2. Navigate to the test page (now logged in)
-    await testPage.setUserAgent('colby-github');
     await testPage.goto(`${siteFull}/test-page`);
 
     // 3. Capture Cookies to share with Percy
