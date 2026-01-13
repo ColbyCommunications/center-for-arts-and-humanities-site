@@ -13,4 +13,3 @@ composer dump-autoload
 yarn
 yarn scripts:build
 cd -
-
