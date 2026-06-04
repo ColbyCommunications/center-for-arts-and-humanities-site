@@ -1,9 +1,9 @@
 {
     "require": {
-        "wpackagist-theme/hello-elementor": "3.4.4",
-        "colbycommunications/elementor-pro": "3.34.0",
-        "wpackagist-plugin/classic-editor": "1.6.7",
-        "wpackagist-plugin/elementor": "3.34.0",
+        "wpackagist-theme/hello-elementor": "3.4.9",
+        "colbycommunications/elementor-pro": "4.1.0",
+        "wpackagist-plugin/classic-editor": "1.7.0",
+        "wpackagist-plugin/elementor": "4.1.1",
         "wpackagist-plugin/disable-everything": "0.4.1"
     },
     "repositories": [],
